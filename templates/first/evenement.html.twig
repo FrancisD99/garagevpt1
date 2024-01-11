@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Garage Vincent Parrot - Accueil{% endblock %}</title>
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css1/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
+  {% endblock %}
+</head>
+<body>
+    
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="voir-menu">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a href="http://127.0.0.1:8000/first">accueil</a></li>
+            <li><a href="http://127.0.0.1:8000/Qsm">QSM</a></li>
+            <li><a class="active" aria-current="true" style="color: rgb(61, 78, 90);" href="http://127.0.0.1:8000/evenement">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+            <li><a href="ecommerce.html">
+              <i class="fa-solid fa-bag-shopping"></i> 
+          </a>
+       </li>
+            <li><a class="btn btn-outline-danger" href="faire_un_don.html">Connexion admin</a></li>
+            <!-- <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" style="color: black;">Faire un Don</a></li> -->
+            <label for="check" class="cacher-menu">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </nav>
+   <div class="container">
+
+    <header>
+        <h1 class="display-3" style="color: #827171;">
+            Nos Service de Reparation
+        </h1>
+    </header>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="card mb-3" style="max-width: 950px; margin-right: auto; padding-inline: 0px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/images/mecanicien-afro-americain-reparant-moteur-voiture-dans-atelier.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Revision Moteur</h5>
+                  <p class="card-text">Dans le cadre de l’accompagnement éducatif et social de nos orphelins, 
+                    l’association MAVULA organise 12 jours de colonies de vacances au sein de l’orphelinat ELIKIA<br>
+            
+                    </p>
+                  <p class="card-text"><small class="text-body-secondary">11/10/2023</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">Participer à l'évènement</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 950px; margin-right: auto;padding-inline: 0px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/images/mecanicien-entretien-voiture.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Freins </h5>
+                  <p class="card-text">Le système de freinage est essentiel à votre sécurité, et permet de ralentir ou immobiliser le véhicule. Il est souvent complété par l'ABS qui peut empêcher le blocage des roues pendant le freinage, et l'ESP qui permet de conserver la trajectoire du véhicule.</p>
+                  <p class="card-text"><small class="text-body-secondary">2023/10/05</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">contribuer en ligne à cette compagne</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 950px; margin-right: auto;padding-inline: 0px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/images/male-painter-dressed-hazmat-suit-inside-car-shop.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Carrosserie</h5>
+                  <p class="card-text">Peinture et retouche carrosserie. Réparation de pare-brise. Lustrage des feux ou optique. Polissage de votre véhicule. Travaux lourds de tôlerie. Débosselage.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 950px; margin-right: auto;padding-inline: 0px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/images/mechanic-checking-oil-level-car-engine.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Vidange Huile Moteur</h5>
+                  <p class="card-text">La révision et la vidange sont des étapes clés dans l'entretien de votre véhicule. Elles préservent votre moteur et en assurent sa longévité. Nous vous recommandons d’effectuer une vidange tous les ans ou tous les 15000 km.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 950px; margin-right: auto;padding-inline: 0px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="assets/images/mechanic-fixation-pneu-voiture.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Pneus</h5>
+                  <p class="card-text">Démontage de la roue. Dépose de l'ancien pneu. Remplacement valve de gonflage. Montage du pneu sur la jante. Gonflage du pneu. Équilibrage de la roue. Dépose de l'ancien. Repose de la roue avec serrage. Dépose de l'ancien. Recyclage des pneus usagés.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--div class="card mb-3" style="max-width: 540px; margin-right: auto;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./medias/images/header2.jpg" class="img-fluid rounded-start"  alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px; margin-right: auto">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./medias/images/header2.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  <a  class="btn btn-outline-danger" href="Evenement.html">Lire la suite</a>
+                </div>
+              </div>
+            </div>
+          </div-->
+          
+          
+          
+
+
+          
+          
+    
+        
+    </div>
+   </div>
+
+   
+    
+    <!---->
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Association Mavula</h3>
+                      <p>Au nom de l’associtation, nous vous remercions de participer à l’amélioration de la vie des enfants.</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Acceuil</h3>
+                          <ul>
+                            <li><a href="http://127.0.0.1:8000/evenement">Evenement</a></li>
+                            <li><a href="http://127.0.0.1:8000/Qsm">Qui sommes-nous ?</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact">Nous rejoindre !</a></li>
+                          </ul>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a>Adresse: Tour Eiffel
+                              Champ de Mars, 5 Av. Anatole France, 75007 Paris, Francer</a></li>
+                            <li><a>Téléphone: +242068101463</a></li>
+                            <li><a>Email: vparrot@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Horaires d'ouverture</h3>
+                        <ul class="liste-horaires">
+                          <li>Lun.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mar.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mer.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Jeu.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Ven.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Sam.:  08:45 - 12:00</li>
+                          <li>Dim.:  Fermé </li>
+                        </ul>
+                  </div>
+
+
+
+
+                    <div class="col-lg-3 item social"><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </footer>
+    
+    </div>
+
+
+  {% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  {% endblock %}
+
+    <!--footer>FOOTER</footer-->
+
+</body>
+</html>

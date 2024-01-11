@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Garage Vincent Parrot - Accueil{% endblock %}</title>
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css1/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
+  {% endblock %}
+</head>
+<body class="custom-body">
+    
+    <nav>
+
+      <div class="logo">
+        <img src="chemin_vers_votre_logo.png" alt="Logo du site">
+        <input type="checkbox" id="check" />
+    </div>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="voir-menu">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a class="active" aria-current="true" style="color: rgb(61, 78, 90);"href="http://127.0.0.1:8000/first">acceuil</a></li>
+            <li><a href="http://127.0.0.1:8000/Qsm">QSM</a></li>
+            <li><a href="http://127.0.0.1:8000/evenement">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+             <li><a href="ecommerce.html">
+                    <i class="fa-solid fa-bag-shopping"></i> 
+                </a>
+             </li>
+            <li><a class="btn btn-outline-danger" href="#">Connexion admin</a></li>
+            <!-- <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" style="color: black;">Faire un Don</a></li> -->
+            <label for="check" class="cacher-menu">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </nav>
+
+  <header>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/smiling-mechanic-with-arms-crossed-spanner.jpg" class="d-block w-100" alt="Association visite">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/two-cars-lifting-maintenance-garage-service-station.jpg" class="d-block w-100" alt="solidariter poignee">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/artificial-lighting-employee-blue-colored-uniform-works-automobile-salon.jpg" class="d-block w-100" alt="Enfants reunis">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   
+    
+    <section class="resume">
+        <span class="rond-versailles ronde"></span>
+        <h2>Bienvenue au Garage Vincent Parrot</h2>
+        <p>LEADER DANS LA REPARATION ET LA VENTE DES VEHICULES DEPUIS 2021<br>
+          Notre équipe de mécaniciens automobiles intervient sur tous types de véhicules <br>
+        de toutes marques et de tous modèles pour les particuliers et les professionnels.
+        </p>
+        <p><a href="http://127.0.0.1:8000/evenement">Nous-Contacter</a></p>
+    </section>
+    
+     <!-- mon script-->
+     <div class="container">
+        <div class="row">
+            <div class="col">
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                      <p>"Confiez l’entretien, la réparation et le dépannage<br>
+                         de votre voiture ou votre utilitaire à notre garage auto."</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                      Someone famous in <cite title="Source Title">Vincent Parrot</cite>
+                    </figcaption>
+                  </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><div class="card" >
+                <img src="assets/images/img6.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Vente de vehicule d'ocassion</h5>
+                <p class="card-text"> recherchez-vous une voiture neuve ? Alors, vous êtes au bon endroit. Des véhicules flambant neufs, des voitures CE neuves, des voitures avec immatriculations pour une journée et des voitures de société parfaitement entretenues provenant d’Allemagne et de toute l’Union européenne. Le tout clairement détaillé et offrant un vaste choix.</p>
+                <a  class="btn btn-outline-danger" href="http://127.0.0.1:8000/vente">Voir plus</a>
+              </div>
+                </div></div>
+            <div class="col"><div class="card" >
+                <img src="assets/images/mecanicien-afro-americain-reparant-moteur-voiture-dans-atelier.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Nos services</h5>
+                <p class="card-text">Pour faciliter  cette rentrée scolaire de 2023-2024 aux familles des orphelins ,
+                    l'association Al Mobadara organise une campagne "Solidaire... pour une meilleure rentrée aux orphelins" 
+                    afin d'assurer tous les besoins nécessaires en fournitures scolaires pour 200 orphelins à l'âge de scolarisation.</p>
+                <a  class="btn btn-outline-danger" href="http://127.0.0.1:8000/evenement">Voir plus</a>
+              </div>
+                </div></div>
+         </div>
+
+     </div>
+    </header>
+    
+    <!---->
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Association Mavula</h3>
+                      <p>Au nom de l’associtation, nous vous remercions de participer à l’amélioration de la vie des enfants.</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Acceuil</h3>
+                          <ul>
+                            <li><a href="http://127.0.0.1:8000/evenement">Evènements</a></li>
+                            <li><a href="http://127.0.0.1:8000/Qsm">Qui sommes-nous ?</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact">Nous rejoindre !</a></li>
+                          </ul>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a>Adresse: Tour Eiffel
+                              Champ de Mars, 5 Av. Anatole France, 75007 Paris, France</a></li>
+                            <li><a>Téléphone: +242068101463</a></li>
+                            <li><a>Email: vparrot@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Horaires d'ouverture</h3>
+                        <ul class="liste-horaires">
+                          <li>Lun.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mar.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mer.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Jeu.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Ven.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Sam.:  08:45 - 12:00</li>
+                          <li>Dim.:  Fermé </li>
+                        </ul>
+                  </div>
+
+
+
+                    <div class="col-lg-3 item social"><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2023</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+    {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    {% endblock %}
+    <!--footer>FOOTER</footer-->
+
+</body>
+</html>

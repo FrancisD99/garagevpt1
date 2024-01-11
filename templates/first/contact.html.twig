@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Garage Vincent Parrot - Accueil{% endblock %}</title>
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css1/style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
+  {% endblock %}
+</head>
+<body>
+    
+
+
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="voir-menu">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a href="http://127.0.0.1:8000/first">accueil</a></li>
+            <li><a href="http://127.0.0.1:8000/Qsm">QSM</a></li>
+            <li><a href="http://127.0.0.1:8000/evenement">Evenements</a></li>
+            <li><a class="active" aria-current="true" style="color: rgb(61, 78, 90);"href="http://127.0.0.1:8000/contact">Contact</a></li>
+            <li><a href="ecommerce.html">
+                <i class="fa-solid fa-bag-shopping"></i> 
+            </a>
+         </li>
+            <li><a class="btn btn-outline-danger" href="#">Connexion admin</a></li>
+            <label for="check" class="cacher-menu">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <header>
+            <h1 class="display-2" style="color: #827171; text-decoration: underline;border-bottom: 5px;">
+                Contact
+            </h1>
+        </header>
+        
+        <div class="localisation_contact_div">
+           <div class="localisation">
+            <h3>Notre Adresse</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916246075636!2d2.2944812999999997!3d48.858370099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2scg!4v1688060612878!5m2!1sfr!2scg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+           <div class="form_contact">
+                <h3>Envoyer un message</h3>
+                <form action="#">
+                  <input type="text"placeholder="Nom">
+                  <input type="email"placeholder="Adresse Mail">
+                  <input type="text"placeholder="Objet">
+                  <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                  <input type="submit" value="Envoyer">
+                </form>
+           </div>
+        </div>
+    </div>    
+
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Association Mavula</h3>
+                      <p>Au nom de l’associtation, nous vous remercions de participer à l’amélioration de la vie des enfants.</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Acceuil</h3>
+                          <ul>
+                            <li><a href="http://127.0.0.1:8000/evenement">Evènements</a></li>
+                            <li><a href="http://127.0.0.1:8000/Qsm">Qui sommes-nous ?</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact">Nous rejoindre !</a></li>
+                          </ul>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a>Adresse:11 Rue du bois </a></li>
+                            <li><a>Téléphone: +242068101463</a></li>
+                            <li><a>Email: vparrot@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Horaires d'ouverture</h3>
+                          <ul class="liste-horaires">
+                            <li>Lun.:  08:45 - 12:00, 14:00 - 18:00</li>
+                            <li>Mar.:  08:45 - 12:00, 14:00 - 18:00</li>
+                            <li>Mer.:  08:45 - 12:00, 14:00 - 18:00</li>
+                            <li>Jeu.:  08:45 - 12:00, 14:00 - 18:00</li>
+                            <li>Ven.:  08:45 - 12:00, 14:00 - 18:00</li>
+                            <li>Sam.:  08:45 - 12:00</li>
+                            <li>Dim.:  Fermé </li>
+                          </ul>
+                    </div>
+
+
+
+                    <div class="col-lg-3 item social"><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2023</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+
+
+    {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    {% endblock %}
+    <!--footer>FOOTER</footer-->
+
+</body>
+</html>

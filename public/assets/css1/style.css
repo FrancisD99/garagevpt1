@@ -1,0 +1,758 @@
+body.custom-body {
+    margin: 0;
+    padding:0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: arial;
+    font-size: 19px;
+}
+nav {
+    background-color: #9b9898;
+    padding: 20px;
+    text-align: right;
+}
+
+.logo {
+    float: left; /* Pour flotter le logo à gauche */
+    margin-right: 20px; /* Pour ajouter un espace entre le logo et les autres éléments de la barre de navigation */
+}
+
+.logo img {
+    max-height: 50px; /* Ajustez la hauteur du logo selon vos besoins */
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+.menu li {
+    display: inline;
+    margin-left: 22px;
+}
+.menu li a {
+    text-decoration: none;
+    color: rgb(252, 253, 255);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.menu li a:hover {
+    color: rgb(52, 65, 75);
+    transition: 0.5s;
+}
+.focus {
+    color: rgb(61, 78, 90);
+}
+.voir-menu, .cacher-menu, #check {
+    display: none;
+}
+section {
+    margin-bottom: 30px;
+}
+section img {
+    width: 100%;
+}
+.resume {
+    width: 85%;
+    background-color: #aeaaaa;
+    margin: auto;
+    margin-bottom: 35px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 3px 3px 9px #ddd;
+    margin-top: 50px;
+}
+.resume h2 {
+    text-align: center;
+    color: rgb(86, 97, 113);
+}
+.resume p {
+    text-align: justify;
+    text-indent: 50px;
+}
+.resume p:last-child {
+    display: inline;
+    background-color: rgb(39, 102, 113);
+    padding: 5px 25px;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.7s;
+}
+a:hover {
+    color: #ffffff;
+    transition: 0.7s;
+}
+
+a.active{
+    text-decoration: underline;
+    background: rgba(193, 217, 218, 0.121);
+}
+.ronde {
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    
+    
+}
+.rond-versailles {
+    background-image: url(../images/smiling-mechanic-with-arms-crossed-spanner.jpg);
+    
+}
+
+@media screen and (max-width: 950px) {
+    .voir-menu, .cacher-menu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .cacher-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        color: #570e0e;
+    }
+    .voir-menu:hover, .cacher-menu:hover {
+        color: #666;
+        transition: 0.5s;
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #dbdbdb;
+        height: 100vh;
+        width: 100%;
+        transition: 0.7s;
+        padding-top: 80px;
+    }
+    .menu li {
+        display: block;
+        text-align: center;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #ccc;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .ronde {
+        width: 65%;
+        border-radius: 50px;
+        float: none;
+        margin-right: 0;
+    }
+    .resume {
+        height: auto;
+        text-align: center;
+    }
+
+
+
+#carouselExampleAutoplaying{
+    width: 80%;
+    margin: auto;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: auto;
+}
+
+
+}
+
+  .footer-clean {
+      padding:20px 0;
+      background-color:#504d4d;
+      color:#d6cfcf;
+      margin-top: 5%;
+    }
+    
+    .footer-clean h3 {
+      margin-top:0;
+      margin-bottom:12px;
+      font-weight:bold;
+      font-size:16px;
+    }
+    
+    .footer-clean ul {
+      padding:0;
+      list-style:none;
+      line-height:1.6;
+      font-size:14px;
+      margin-bottom:0;
+    }
+    
+    .footer-clean ul a {
+      color: inherit;
+      text-decoration:none;
+      opacity:0.8;
+    }
+    
+    .footer-clean ul a:hover {
+      opacity:1;
+    }
+    
+    .footer-clean .item.social {
+      text-align:right;
+    }
+    
+    @media (max-width:767px) {
+      .footer-clean .item {
+        text-align:center;
+        padding-bottom:20px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .footer-clean .item.social {
+        text-align:center;
+      }
+    }
+    
+    .footer-clean .item.social > a {
+      font-size:24px;
+      width:40px;
+      height:40px;
+      line-height:40px;
+      display:inline-block;
+      text-align:center;
+      border-radius:50%;
+      border:1px solid #570e0e;
+      margin-left:10px;
+      margin-top:22px;
+      color:inherit;
+      opacity:0.75;
+    }
+    
+    .footer-clean .item.social > a:hover {
+      opacity:0.9;
+    }
+    
+    @media (max-width:991px) {
+      .footer-clean .item.social > a {
+        margin-top:40px;
+      }
+    }
+    
+    @media (max-width:767px) {
+      .footer-clean .item.social > a {
+        margin-top:10px;
+      }
+    }
+    
+    .footer-clean .copyright {
+      margin-top:14px;
+      margin-bottom:0;
+      font-size:13px;
+      opacity:0.6;
+    }
+    
+    /* Credit to https://epicbootstrap.com/snippets/footer-with-columns */
+  
+
+
+    #contact {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 12%;
+    }
+    .localisation_contact_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 100px 0;
+        height: 80vh;
+    }
+    .localisation {
+        width: 49%;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .localisation iframe {
+        width: 100%;
+        border-radius: 6px;
+    }
+    
+    .localisation_contact_div .form_contact {
+        width: 49%;
+        height: 88%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        padding: 15px;
+        border-radius: 6px;
+    }
+    .localisation_contact_div h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    
+    }
+    .localisation_contact_div .form_contact form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .form_contact form input , textarea {
+        border: 1px solid #ccc;
+        width: 100%;
+        margin-bottom:  15px;
+        padding: 2px;
+        outline: 0;
+        border-radius: 6px;
+        font-size: 15px;
+        resize: none;
+    }
+    .form_contact form input[type="submit"] {
+        margin-bottom: 0;
+        background-color: #ea1f33;
+        color: #fff;
+        border: 0;
+    }
+    
+    .menu_toggle {
+        display: none;
+    }
+
+      /*news*/
+.contnaire_p h1{
+    font-size: 1rem;
+    color: #4b4f5c;
+    padding-left: 0.8rem;
+    margin: 20px;
+}
+.contnaire_p p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    margin: 10px;
+    color: #707589;
+    padding-left: 20px;
+}
+
+.contnaire_p_img img{
+    height: 300px;
+    padding-left: 80px;
+    margin: 20px 20px;
+    justify-content: center;
+}
+
+.box {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #dfe0e8;
+    border-radius: 3px;
+    padding: 25px;
+    width: calc(33% - 10px);
+    margin-top: 10px;
+}
+::selection{
+    background: rgba(23,162,184,0.3);
+}
+
+
+.wrapper{
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.wrapper .box i.quote{
+    font-size: 20px;
+    color: red;
+}
+
+.wrapper .box .content{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .box .info .name{
+    font-size: 17px;
+    font-weight: 600;
+}
+.wrapper .box .info .job{
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.wrapper .box .info .stars{
+    margin-top: 2px;
+}
+
+.box .info .stars i{
+    color: red;
+}
+
+.wrapper .box .content .image{
+    height: 75px;
+    width: 75px;
+    padding: 3px;
+    background: rgb(109, 60, 60);
+    border-radius: 50%;
+}
+ .box .content .image img{
+    height: 100%;
+    width: 100%;
+    /*object-fit: cover;*/
+    border-radius: 50%;
+    border: 2px solid #fff
+}
+
+
+@media (max-width: 1045px){
+    .wrapper .box{
+        width: calc(50% - 10px);
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 702px){
+    .wrapper .box{
+        width: 100%;
+    }
+}
+
+
+
+/*----- Contenu e-commmerce -------------------------*/
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 999;
+    background-color: #000;
+}
+.navbar .logo h1{
+    color: white;
+    cursor: pointer;
+}
+.navbar .menu2 li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu2 li a {
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.navbar .menu2 .active{
+    border-bottom: 4px solid #f63e4e;
+}
+.navbar .menu2 .a:hover{
+    border-bottom: 4px solid #f63e4e;
+}
+.content2{
+    background-image: url(/images/Bg_banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #424144;
+    height: 100vh;
+}
+.content2 h1{
+    font-size: 40px;
+}
+
+.content2 p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.content2 button{
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    background: #f63e4e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.produits_texte{
+    text-align: left;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-left: 80px;
+    color: #424144;
+}
+.section_produits{
+    padding: 40px 5%;
+}
+.produits{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.produits .carte{
+    width: 310px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0, 0 ,0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.produits .carte img{
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+.produits .carte .desc{
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+.produits .carte .titre{
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+
+.produits .carte .box2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.produits .carte .prix{
+    color: #ea1f33;
+    font-size: 20px;
+    font-weight: bold;
+}
+.produits .carte .achat{
+    font-size: 13px;
+    font-weight: 900;
+    color: #ea1f33;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+.produits .carte .box2 .achat:hover{
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+/*Vente*/
+
+.card1-img-top{
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50%;
+
+}
+
+.col1{
+    display: grid;
+    place-items: center;
+    background: #dfe0e8;
+    border-radius: 3px;
+    padding: 25px;
+    width: calc(50% - 5%);
+    margin-top: 10px;
+}
+
+
+/* Style pour le diaporama */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.mySlides img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style pour les boutons de navigation du diaporama */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style pour la section de la galerie de voitures */
+.inventory {
+    text-align: center;
+    margin: 20px;
+}
+
+.car {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card_1 {
+    max-width: 200px;
+    margin: 0 auto 10px;
+}
+
+.car-images img {
+    max-width: 100%;
+    display: none;
+}
+
+.prev, .next {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+
+.car-buttons {
+    text-align: center;
+}
+
+/* Style pour la section de filtrage */
+.filter {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label, input, button {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour les résultats de la recherche */
+.results {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-results .car {
+    margin: 10px;
+}
+
+.preview-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Ajouter ces styles pour l'effet de fondu */
+.mySlides {
+    display: none;
+    animation: fade 1s linear infinite;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+
+/* Style pour les balises de paragraphe */
+.car p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Style spécifique pour le prix */
+.car p:nth-child(4) {
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* Style pour les liens "Voir les détails" */
+.car a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.car a:hover {
+    background-color: #0056b3;
+}
