@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\OrderRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use symfony\Component\Validator\constraints as Assert;
+
 #[ORM\Entity(repositoryClass: OrderRepository::class)]
 #[ORM\Table(name: '`order`')]
 class Order
@@ -15,15 +17,21 @@ class Order
     private ?int $id = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\Length(min: 5, max: 50)]
     private ?string $user = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Length(min: 5, max: 255)]
     private ?string $vehicle = null;
 
     #[ORM\Column]
+    #[Assert\NotNull()]
     private ?\DateTimeImmutable $orderDate = null;
 
     #[ORM\Column]
+    #[Assert\NotNull()]
+    #[Assert\Positive()]
+    #[Assert\LessThan(200)]
     private ?float $totalPrice = null;
 
     public function getId(): ?int

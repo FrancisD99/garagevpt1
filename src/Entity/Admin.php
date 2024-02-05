@@ -5,6 +5,9 @@ namespace App\Entity;
 use App\Repository\AdminRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use symfony\Component\Validator\constraints as Assert;
+
+
 #[ORM\Entity(repositoryClass: AdminRepository::class)]
 class Admin
 {
@@ -17,9 +20,11 @@ class Admin
     private ?string $user = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\Length(min: 5, max: 50)]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\Length(min: 5, max: 50)]
     private ?string $lastname = null;
 
     public function getId(): ?int

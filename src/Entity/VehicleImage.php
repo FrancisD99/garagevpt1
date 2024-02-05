@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\VehicleImageRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use symfony\Component\Validator\constraints as Assert;
+
 #[ORM\Entity(repositoryClass: VehicleImageRepository::class)]
 class VehicleImage
 {
@@ -23,6 +25,7 @@ class VehicleImage
     private ?string $path = null;
 
     #[ORM\Column]
+    #[Assert\NotNull()]
     private ?\DateTimeImmutable $uploadeAt = null;
 
     public function getId(): ?int

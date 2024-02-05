@@ -5,6 +5,9 @@ namespace App\Entity;
 use App\Repository\OpeningHoursRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use symfony\Component\Validator\constraints as Assert;
+
+
 #[ORM\Entity(repositoryClass: OpeningHoursRepository::class)]
 class OpeningHours
 {
@@ -20,9 +23,11 @@ class OpeningHours
     private ?string $dayOfWeek = null;
 
     #[ORM\Column]
+    #[Assert\NotNull()]
     private ?\DateTimeImmutable $openingTime = null;
 
     #[ORM\Column]
+    #[Assert\NotNull()]
     private ?\DateTimeImmutable $closingTime = null;
 
     public function getId(): ?int
