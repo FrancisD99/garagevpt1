@@ -16,14 +16,14 @@ class Admin
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable:true)]
     private ?string $user = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable:true)]
     #[Assert\Length(min: 5, max: 50)]
     private ?string $firstname = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable:true)]
     #[Assert\Length(min: 5, max: 50)]
     private ?string $lastname = null;
 

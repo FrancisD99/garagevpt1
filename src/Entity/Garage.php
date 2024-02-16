@@ -16,16 +16,16 @@ class Garage
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 100, nullable:true)]
     private ?string $address = null;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 100, nullable:true)]
     private ?string $phoneNumber = null;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 100, nullable:true)]
     private ?string $email = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable:true)]
     private ?string $website = null;
 
     public function getId(): ?int

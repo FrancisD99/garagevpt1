@@ -4,10 +4,11 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use symfony\Component\Validator\constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity('name')]
 class User
 {
     #[ORM\Id]
@@ -16,6 +17,7 @@ class User
     private ?int $id = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\NotBlank()]
     #[Assert\Length(min: 5, max: 50)]
     private ?string $name = null;
 
@@ -27,23 +29,19 @@ class User
     #[Assert\Length(min: 5, max: 50)]
     private ?string $email_adress = null;
 
-    #[ORM\Column]
-    #[Assert\NotNull()]
-    private ?\DateTimeImmutable $CreatedAt = null;
-
-    #[ORM\Column(length: 30)]
+    #[ORM\Column(length: 30, nullable: true)]
     private ?string $password = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable: true)]
     private ?string $username = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $email = null;
 
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $tel = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable: true)]
     private ?string $employee = null;
 
     public function getId(): ?int
@@ -83,18 +81,6 @@ class User
     public function setEmailAdress(string $email_adress): static
     {
         $this->email_adress = $email_adress;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->CreatedAt;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $CreatedAt): static
-    {
-        $this->CreatedAt = $CreatedAt;
 
         return $this;
     }
@@ -158,4 +144,5 @@ class User
 
         return $this;
     }
+
 }

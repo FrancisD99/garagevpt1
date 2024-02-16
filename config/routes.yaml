@@ -1,3 +1,9 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+
+user_new:
+    path: /user/new
+    controller: App\Controller\UserController::new
+    methods: [GET, POST]

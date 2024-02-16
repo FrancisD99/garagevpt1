@@ -1,0 +1,158 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Garagevp - Mes Users{% endblock %}
+
+{% block navbar %}
+    <nav>
+
+      <div class="logo">
+        <img src="chemin_vers_votre_logo.png" alt="Logo du site">
+        <input type="checkbox" id="check" />
+    </div>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="voir-menu">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a class="active" aria-current="true" style="color: rgb(61, 78, 90);"href="http://127.0.0.1:8000/first">acceuil</a></li>
+            <li><a href="http://127.0.0.1:8000/Qsm">QSM</a></li>
+            <li><a href="http://127.0.0.1:8000/evenement">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+             <li><a href="ecommerce.html">
+                    <i class="fa-solid fa-bag-shopping"></i> 
+                </a>
+             </li>
+
+             <li class='nav-item'>
+                <a class='nav-link' href="{{ path('user.new') }}">user
+                </a>
+             </li>
+
+            <li><a class="btn btn-outline-danger" href="#">Connexion</a></li>
+            <!-- <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" style="color: black;">Faire un Don</a></li> -->
+            <label for="check" class="cacher-menu">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </nav>
+ {% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        {% if user is not empty %}
+            <h1>Mes Utilisateurs</h1>
+
+            <a href="{{ path('user.new') }}" class="btn btn-primary">
+                Créer un utilisateur
+            </a>
+
+            <div class="count mt-4">
+                <h4>Il y a {{ user|length }} Utilisateurs au Total</h4>
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Edition</th>
+                        <th scope="col">Suppression</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in user %}
+                        <tr class="table-primary">
+                            <th scope="row">{{ user.id }}</th>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.firtsname }}</td>
+                            <td>{{ user.emailadress }}</td>
+                            <td>
+                            <a href="{{ path('user.edit', {id: user.id }) }}" class="btn 
+                            btn-info"> Modifier</a>
+                            </td>
+                            <td>
+                              <a href="{{ path('user.delete', { id: user.id }) }}" class="btn 
+                              btn-warning"> Supprimer</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="navigation d-flex justify-content-center mt-4">
+                {{ knp_pagination_render(user) }}
+            </div>
+        {% else %}
+            <h4>Il n'y a pas d'utilisateurs</h4>
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+    <div class="footer-clean">
+        <footer>
+            <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Association Mavula</h3>
+                      <p>Au nom de l’associtation, nous vous remercions de participer à l’amélioration de la vie des enfants.</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Acceuil</h3>
+                          <ul>
+                            <li><a href="http://127.0.0.1:8000/evenement">Evènements</a></li>
+                            <li><a href="http://127.0.0.1:8000/Qsm">Qui sommes-nous ?</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact">Nous rejoindre !</a></li>
+                          </ul>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a>Adresse: Tour Eiffel
+                              Champ de Mars, 5 Av. Anatole France, 75007 Paris, France</a></li>
+                            <li><a>Téléphone: +242068101463</a></li>
+                            <li><a>Email: vparrot@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Horaires d'ouverture</h3>
+                        <ul class="liste-horaires">
+                          <li>Lun.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mar.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mer.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Jeu.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Ven.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Sam.:  08:45 - 12:00</li>
+                          <li>Dim.:  Fermé </li>
+                        </ul>
+                  </div>
+
+
+
+                    <div class="col-lg-3 item social"><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2023</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+    </div>
+    {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    {% endblock %}
+        </footer>
+    </div>
+{% endblock %}

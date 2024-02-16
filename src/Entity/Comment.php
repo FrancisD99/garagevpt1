@@ -15,18 +15,19 @@ class Comment
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable:true)]
     #[Assert\Length(min: 5, max: 50)]
     private ?string $user = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 50, nullable:true)]
     #[Assert\Length(min: 5, max: 50)]
     private ?string $vehicle = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $commentDate = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable:true)]
+    #[Assert\NotBlank()]
     private ?string $content = null;
 
     public function getId(): ?int

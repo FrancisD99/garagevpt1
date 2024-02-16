@@ -4,88 +4,88 @@ namespace App\Entity;
 
 use App\Repository\VehicleRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
-use symfony\Component\Validator\constraints as Assert;
 
-#[ORM\Entity(repositoryClass: VehicleRepository::class)]
+#[ORM\Entity(repositoryClass:VehicleRepository::class)]
 class Vehicle
 {
+    
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    
     private ?int $id = null;
 
+
     #[ORM\Column(length: 50)]
     #[Assert\NotBlank()]
     #[Assert\Length(min: 5, max: 50)]
+    
     private ?string $make = null;
 
+    
     #[ORM\Column(length: 50)]
     #[Assert\NotBlank()]
     #[Assert\Length(min: 5, max: 50)]
-    private ?string $model = null;
+    
+    private ?string $Model = null;
 
+    
     #[ORM\Column(length: 50)]
     #[Assert\NotBlank()]
     #[Assert\Length(min: 5, max: 50)]
+    
+    private ?string $mileage = null;
+
+    
+    #[ORM\Column(length: 50, nullable: true)]
+    #[Assert\NotBlank()]
+    #[Assert\Length(min: 5, max: 50)]
+    
     private ?string $modelvehicle = null;
 
+    
     #[ORM\Column(length: 10)]
     #[Assert\Length(min: 4, max: 10)]
+    
     private ?string $year = null;
 
+    
     #[ORM\Column]
     #[Assert\NotNull()]
     #[Assert\Positive()]
     #[Assert\LessThan(200)]
+    
     private ?float $price = null;
 
-    #[ORM\Column(length: 255)]
+    
+    #[ORM\Column(length: 255, nullable: true)]
     #[Assert\Length(min: 4, max: 255)]
+    
     private ?string $description = null;
 
-    #[ORM\Column]
+    
+    #[ORM\Column(type:'boolean', nullable:true)]
+    
     private ?bool $isAvailable = null;
+
+
+    public function getmileage(): ?string
+    {
+        return $this->mileage;
+    }
+
+    public function setmileage(string $mileage): static
+    {
+        $this->mileage = $mileage;
+
+        return $this;
+    }
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getMake(): ?string
-    {
-        return $this->make;
-    }
-
-    public function setMake(string $make): static
-    {
-        $this->make = $make;
-
-        return $this;
-    }
-
-    public function getModel(): ?string
-    {
-        return $this->model;
-    }
-
-    public function setModel(string $model): static
-    {
-        $this->model = $model;
-
-        return $this;
-    }
-
-    public function getModelvehicle(): ?string
-    {
-        return $this->modelvehicle;
-    }
-
-    public function setModelvehicle(string $modelvehicle): static
-    {
-        $this->modelvehicle = $modelvehicle;
-
-        return $this;
     }
 
     public function getYear(): ?string
@@ -111,6 +111,28 @@ class Vehicle
 
         return $this;
     }
+
+    public function getMake(): ?string
+{
+    return $this->make;
+}
+
+    public function setMake(string $make): static
+{
+    $this->make = $make;
+    return $this;
+}
+
+public function getModel(): ?string
+{
+    return $this->Model;
+}
+
+    public function setModel(string $Model): static
+{
+    $this->Model = $Model;
+    return $this;
+}
 
     public function getDescription(): ?string
     {
