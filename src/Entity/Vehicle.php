@@ -14,9 +14,24 @@ class Vehicle
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    
     private ?int $id = null;
 
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: "vehicles")]
+#[ORM\JoinColumn(nullable: false)]
+private User $user;
+
+
+public function getUser(): User
+{
+    return $this->user;
+}
+
+public function setUser(User $user): self
+{
+    $this->user = $user;
+
+    return $this;
+}
 
     #[ORM\Column(length: 50)]
     #[Assert\NotBlank()]

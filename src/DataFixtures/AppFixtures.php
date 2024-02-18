@@ -5,10 +5,16 @@ namespace App\DataFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
+use App\Entity\User1;
 use App\Entity\Vehicle;
+use Faker\Factory;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasher;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
 {
+
+
     public function load(ObjectManager $manager): void
     {
         // Creating a user
@@ -28,13 +34,17 @@ class AppFixtures extends Fixture
         $vehicle1->setPrice(25000);
         $manager->persist($vehicle1);
 
-        $vehicle2 = new Vehicle();
-        $vehicle2->setMake("Ford");
-        $vehicle2->setModel("Focus");
-        $vehicle2->setYear(2019);
-        $vehicle2->setMileage(40000);
-        $vehicle2->setPrice(20000);
-        $manager->persist($vehicle2);
+       
+
+        // Récupérer un utilisateur existant (par exemple, le premier utilisateur créé)
+        $user = $manager->getRepository(User::class)->findOneBy([]);
+        // Assurez-vous qu'un utilisateur a été trouvé avant de l'associer au véhicule
+        if ($user) {
+        $vehicle1->setUser($user);
+        } else {
+    // Gérer le cas où aucun utilisateur n'est trouvé
+}
+
 
         $manager->flush();
 
@@ -52,6 +62,22 @@ class AppFixtures extends Fixture
             $manager->persist($user);
         }
 
+        // Création de plusieurs entités User1
+        $faker = Factory::create('fr_FR');
+        for ($i = 0; $i < 10; $i++) {
+            $user1 = new User1();
+            // Définir les valeurs des propriétés de User1
+            $user1->setFullname($faker->name())
+                ->setPseudo(mt_rand(0, 1) === 1 ? $faker->firstName() : null)
+                ->setEmail($faker->email())
+                ->setRoles(['ROLE_USER'])
+                ->setPlainPassword('password');
+
+           
+
+            $manager->persist($user1);
+        }
+
         $manager->flush();
     }
 
@@ -61,4 +87,10 @@ class AppFixtures extends Fixture
         // Générer un mot de passe aléatoire (exemple)
         return 'password123';
     }
+
+
 }
+
+
+
+        
