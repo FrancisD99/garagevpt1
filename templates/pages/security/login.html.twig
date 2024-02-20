@@ -1,11 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}GarageVP - Connexion 
-{% endblock %}
+
+{% block title %}GarageVP - Connexion {% endblock %}
+
+{% block navbar %}
+    <nav>
+
+      <div class="logo">
+        <img src="./assets/images/logo.jpg" alt="Logo du site">
+        <input type="checkbox" id="check" />
+    </div>
+
+        <input type="checkbox" id="check" />
+        <label for="check" class="voir-menu">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a class="active" aria-current="true" style="color: rgb(61, 78, 90);"href="http://127.0.0.1:8000">acceuil</a></li>
+            <li><a href="http://127.0.0.1:8000/Qsm">QSM</a></li>
+            <li><a href="http://127.0.0.1:8000/evenement">Services</a></li>
+            <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+             <li><a href="ecommerce.html">
+                    <i class="fa-solid fa-bag-shopping"></i> 
+                </a>
+             </li>
+
+
+            <li><a class="btn btn-outline-danger" href="#">Connexion</a></li>
+            <!-- <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" style="color: black;">Faire un Don</a></li> -->
+            <label for="check" class="cacher-menu">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </nav>
+ {% endblock %}
+
 
 {% block body %}
     <div class='container'>
-        <h1 class='mt-4'> Formulaire de connexion</h1>
+        <h1 class='mt-4'>connexion</h1>
+
+        {% for message in app.flashes('success') %}
+            <div class='alert alert-succès mt-4'>
+            {{ message }}
+            </div>
+          {% endfor %}  
 
         {% if error %}
             <div class="alert alert-danger">
@@ -20,14 +59,78 @@
                 name="_username" placeholder="exemplegaragevp.fr" value="{{ last_username }}">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
            </div>
-            <div class="form-group">
-                <label for="password" class="form-label mt-4">Mot de passe</label>
-                <input type="password" class="form-control" id="password" 
-                name= '_password' placeholder="********" autocomplete="off">
+            <form method="POST" action="{{ path('security.login') }}">
+    <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" class="form-control" id="password" name="_password" placeholder="********" autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>
+    </div>
+{% endblock %}
+
+
+{% block footer %}
+    <div class="footer-clean">
+        <footer>
+            <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Garage Vincent Parrot</h3>
+                      <p>Découvrez notre sélection de véhicules d'occasion de qualité, prêts à vous accompagner sur la route de vos aventures. Faites le choix de la fiabilité et de l'expertise avec Vincent Parrot</p>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Acceuil</h3>
+                          <ul>
+                            <li><a href="http://127.0.0.1:8000/evenement">Evènements</a></li>
+                            <li><a href="http://127.0.0.1:8000/Qsm">Qui sommes-nous ?</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact">Nous rejoindre !</a></li>
+                          </ul>
+                    </div>
+
+
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a>Adresse: Tour Eiffel
+                              Champ de Mars, 5 Av. Anatole France, 75007 Paris, France</a></li>
+                            <li><a>Téléphone: +242068101463</a></li>
+                            <li><a>Email: vparrot@gmail.com</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-4 col-md-3 item">
+                      <h3>Horaires d'ouverture</h3>
+                        <ul class="liste-horaires">
+                          <li>Lun.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mar.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Mer.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Jeu.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Ven.:  08:45 - 12:00, 14:00 - 18:00</li>
+                          <li>Sam.:  08:45 - 12:00</li>
+                          <li>Dim.:  Fermé </li>
+                        </ul>
+                  </div>
+
+
+
+                    <div class="col-lg-3 item social"><a href="https://facebook.com"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Company Name © 2023</p>
+                    </div>
+                </div>
             </div>
-            <button type='submit' class'btn btn-primary'>
-                se connecter
-            </button>
-        </form>
+        </footer>
+    
+    </div>
+    {% block javascripts %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    {% endblock %}
+        </footer>
     </div>
 {% endblock %}

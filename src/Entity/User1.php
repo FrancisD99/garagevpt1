@@ -37,14 +37,14 @@ class User1 implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\NotNull()]
     private array $roles = [];
 
-    private $plainPassword = null;
+    private ?string $plainPassword = null;
 
     /**
      * @var string The hashed password
      */
     #[ORM\Column]
     #[Assert\NotBlank()]
-    private ?string $password = null;
+    private ?string $password = 'null';
 
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
@@ -52,6 +52,7 @@ class User1 implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __construct()
     {
+        $this->roles = [];
         $this->createdAt = new \DateTimeImmutable();
     }
 
@@ -145,7 +146,7 @@ class User1 implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
-    public function setPassword(string $password): static
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 

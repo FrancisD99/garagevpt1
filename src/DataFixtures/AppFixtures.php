@@ -20,7 +20,7 @@ class AppFixtures extends Fixture
         // Creating a user
         $user = new User();
         $user->setName("John");
-        $user->setfirtsname("Doe"); // Assurez-vous que la méthode est appelée setFirstName et non setfirtsname
+        $user->setfirtsname("Doe");
         $user->setemailadress("john.doe@example.com");
         $manager->persist($user);
         $manager->flush();

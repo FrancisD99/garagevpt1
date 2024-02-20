@@ -8,7 +8,7 @@ use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
 /**
- * Auto-generated Migration: Please modify to your needs!
+ 
  */
 final class Version20240213151700 extends AbstractMigration
 {
@@ -19,7 +19,7 @@ final class Version20240213151700 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        // this up() migration is auto-generated, please modify it to your needs
+        // this up() migration 
         $this->addSql('ALTER TABLE admin CHANGE user user VARCHAR(50) DEFAULT NULL, CHANGE firstname firstname VARCHAR(50) DEFAULT NULL, CHANGE lastname lastname VARCHAR(50) DEFAULT NULL');
         $this->addSql('ALTER TABLE comment CHANGE user user VARCHAR(50) DEFAULT NULL, CHANGE vehicle vehicle VARCHAR(50) DEFAULT NULL, CHANGE content content VARCHAR(255) DEFAULT NULL');
         $this->addSql('ALTER TABLE garage CHANGE name name VARCHAR(255) DEFAULT NULL, CHANGE address address VARCHAR(100) DEFAULT NULL, CHANGE phone_number phone_number VARCHAR(100) DEFAULT NULL, CHANGE email email VARCHAR(100) DEFAULT NULL, CHANGE website website VARCHAR(255) DEFAULT NULL');
@@ -33,7 +33,7 @@ final class Version20240213151700 extends AbstractMigration
 
     public function down(Schema $schema): void
     {
-        // this down() migration is auto-generated, please modify it to your needs
+        // this down() migration is 
         $this->addSql('ALTER TABLE admin CHANGE user user VARCHAR(50) DEFAULT \'NULL\', CHANGE firstname firstname VARCHAR(50) DEFAULT \'NULL\', CHANGE lastname lastname VARCHAR(50) DEFAULT \'NULL\'');
         $this->addSql('ALTER TABLE comment CHANGE user user VARCHAR(50) DEFAULT \'NULL\', CHANGE vehicle vehicle VARCHAR(50) DEFAULT \'NULL\', CHANGE content content VARCHAR(255) DEFAULT \'NULL\'');
         $this->addSql('ALTER TABLE garage CHANGE name name VARCHAR(255) DEFAULT \'NULL\', CHANGE address address VARCHAR(100) DEFAULT \'NULL\', CHANGE phone_number phone_number VARCHAR(100) DEFAULT \'NULL\', CHANGE email email VARCHAR(100) DEFAULT \'NULL\', CHANGE website website VARCHAR(255) DEFAULT \'NULL\'');
