@@ -10,8 +10,8 @@ cloner le projet sur votre machine
 git clone https://github.com/
 Dans le fichier .env, définir la variable d'environnement DATABASE_URL en fonction de votre système de gestion de base de données
 installer les dépendances
-composer install
-Création de la base de données
+composer install<br>
+Création de la base de données<br>
 symfony console doctrine:database:create
 exécution du fichier de migration
 symfony console doctrine:migrations:migrate
