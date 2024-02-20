@@ -4,6 +4,8 @@ STUDI - ECF Hiver 2023-24  - Garage V.Parrot
 
 Pour éxécuter le site en local
 
+
+
 cloner le projet sur votre machine
 git clone https://github.com/
 Dans le fichier .env, définir la variable d'environnement DATABASE_URL en fonction de votre système de gestion de base de données
@@ -17,7 +19,13 @@ Insertion de données fixtures (vehicle, User, User1)
 symfony console doctrine:fixtures:load
 ℹ️ ℹ️ ℹ️
 
+
+
+
 Si vous ne souhaitez pas utiliser les donnée fixtures generer, vous pouvez créer directement des utilisateurs sur le site situé dans l'onglet connexion se connecter en tant que . Ce fichier s'occupe de la création de la base de données, des tables, des clés étrangères, du compte admin de Vincent Parrot, des horaires et d'un établissement.
+
+
+
 
 
 Technologies utilisées
