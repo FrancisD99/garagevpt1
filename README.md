@@ -15,7 +15,7 @@ Création de la base de données
 symfony console doctrine:database:create
 exécution du fichier de migration
 symfony console doctrine:migrations:migrate
-Insertion de données fixtures (vehicle, User, User1)
+Insertion de données fixtures (vehicle, User, User1)<br>
 symfony console doctrine:fixtures:load
 ℹ️ ℹ️ ℹ️
 
