@@ -7,8 +7,8 @@ Pour éxécuter le site en local
 
 
 cloner le projet sur votre machine
-git clone https://github.com/
-Dans le fichier .env, définir la variable d'environnement DATABASE_URL en fonction de votre système de gestion de base de données
+git clone https://github.com/<br>
+Dans le fichier .env, définir la variable d'environnement<br> DATABASE_URL en fonction de votre système de gestion de base de données
 installer les dépendances
 composer install<br>
 Création de la base de données<br>
