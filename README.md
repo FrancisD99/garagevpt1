@@ -7,7 +7,7 @@ Pour éxécuter le site en local
 
 
 cloner le projet sur votre machine
-git clone https://github.com/<br>
+git clone https://github.com/FrancisD99/garagevpt1/<br>
 Dans le fichier .env, définir la variable d'environnement<br> DATABASE_URL en fonction de votre système de gestion de base de données
 installer les dépendances
 composer install<br>
