@@ -24,7 +24,10 @@ symfony console doctrine:fixtures:load
 
 Si vous ne souhaitez pas utiliser les donnée fixtures generer, vous pouvez créer directement des utilisateurs sur le site situé dans l'onglet connexion se connecter en tant que . Ce fichier s'occupe de la création de la base de données, des tables, des clés étrangères, du compte admin de Vincent Parrot, des horaires et d'un établissement.
 
+-Nb: 
 
+Le site n'a pas été deployer en ligne juste en local;
+Plusieurs fonctinonalité su ne sont pas encore mise en place cela sera réaliser tres bientot!
 
 
 
